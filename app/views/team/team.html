@@ -1,0 +1,16 @@
+<!-- Page Content -->
+<div class="container" data-ng-controller="TeamController">
+<!-- Team Members Row -->
+<div class="row voffset4">
+  <div class="col-lg-12">
+    <h2 class="page-header">Twinsoft team</h2>
+  </div>
+  <div class="col-xs-3 text-center" data-ng-repeat="item in team">
+    <img class="img-circle img-responsive img-center" data-ng-src="{{item.img}}" alt="">
+    <h3>{{item.name}}
+      <small>{{item.title}}</small>
+    </h3>
+    <p>{{item.description}}</p>
+  </div>
+</div>
+</div>
