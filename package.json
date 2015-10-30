@@ -1,7 +1,12 @@
 {
-  "name": "yeoman",
+  "name": "twinsoft",
+  "version": "0.0.1",
   "private": true,
+  "description": "Twinsoft official web site application.",
+  "main": "server/server.js",
+  "author": "Miodrag Pavkovic",
   "devDependencies": {
+    "connect-livereload": "^0.5.3",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-autoprefixer": "^2.0.0",
@@ -26,15 +31,29 @@
     "jit-grunt": "^0.9.1",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.10",
-    "serve-static": "^1.10.0",
     "time-grunt": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "~4.9.0",
     "jshint": "^2.8.0",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "body-parser": "~1.5.0",
+    "composable-middleware": "^0.3.0",
+    "compression": "~1.0.1",
+    "connect-mongo": "^0.8.1",
+    "cookie-parser": "~1.0.1",
+    "ejs": "~0.8.4",
+    "errorhandler": "~1.0.0",
+    "express-session": "~1.0.2",
+    "express-stormpath": "^2.0.14",
+    "lodash": "~2.4.1",
+    "method-override": "~1.0.0",
+    "mongoose": "~4.0.3",
+    "morgan": "~1.0.0",
+    "serve-favicon": "~2.0.1",
+    "livereload-js": "^2.2.0"
   }
 }
