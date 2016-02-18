@@ -29,6 +29,11 @@ module.exports = function(config) {
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/lodash/lodash.js',
       'client/bower_components/restangular/dist/restangular.js',
+      'client/bower_components/angular-animate/angular-animate.js',
+      'client/bower_components/angular-aria/angular-aria.js',
+      'client/bower_components/angular-material/angular-material.js',
+      'client/bower_components/angular-material-icons/angular-material-icons.min.js',
+      'client/bower_components/ng-material-floating-button/src/mfb-directive.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/livereload-js/dist/livereload.js',
       // endbower

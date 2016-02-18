@@ -1,0 +1,16 @@
+
+<style>
+  /*
+   * The Material demos system does not currently allow targeting the body element, so this
+   * must go here in the HTML.
+   */
+  body[dir=rtl] .hint {
+    right: 2px;
+    left: auto;
+  }
+</style>
+<md-content flex layout="row" layout-padding>
+  <form name="userForm" flex>
+    <div ui-view flex></div>
+  </form>
+</md-content>

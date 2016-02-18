@@ -1,0 +1,59 @@
+
+<md-card flex layout="row" class="blue">
+  <md-button class="md-icon-button md-primary" aria-label="About me">
+    <md-icon md-svg-icon="app/images/action/svg/production/ic_perm_identity_48px.svg"></md-icon>
+  </md-button>
+  <md-card-content >
+    <h2 class="md-title">About me</h2>   
+  </md-card-content>
+</md-card>
+<md-content flex layout-padding layout="row" data-ng-show="!adduser">
+    <p>
+        {{ul.selected.description}} 
+    </p>
+</md-content>
+ <div flex layout="row" data-ng-show="adduser">
+      <md-input-container class="md-block" flex>
+        <label>First Name</label>
+        <input md-maxlength="30" required name="firstName" ng-model="user.firstName" />
+<!--        <div class="hint" ng-if="showHints">Your first name!</div>-->
+        <div ng-messages="userForm.firstName.$error" ng-if="!showHints">
+          <div ng-message="required">Name is required.</div>
+          <div ng-message="md-maxlength">The first name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+      <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+      </div>
+      <md-input-container class="md-block" flex>
+        <label>Last Name</label>
+        <input md-maxlength="30" required name="lastName" ng-model="user.lastName" />
+<!--        <div class="hint" ng-if="showHints">Your Familly name!</div>-->
+        <div ng-messages="userForm.lastName.$error" ng-if="!showHints">
+          <div ng-message="required">Last name is required.</div>
+          <div ng-message="md-maxlength">The last name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout-gt-sm="row"  data-ng-show="adduser">
+      <md-input-container  class="md-block" flex>
+        <label>Title</label>
+        <input ng-model="user.title" name="title" md-maxlength="40">
+<!--        <div class="hint" ng-show="showHints">Your job title?</div>-->
+        <div ng-messages="userForm.title.$error" ng-if="!showHints">
+          <div ng-message="required">Title is required.</div>
+          <div ng-message="md-maxlength">The title has to be less than 40 characters long.</div>
+        </div>
+      </md-input-container>
+      <div flex="5" hide-xs hide-sm>
+        <!-- Spacer //-->
+      </div>
+    </div>
+    <div layout-gt-sm="row"  data-ng-show="adduser">
+      <md-input-container class="md-block" flex>
+        <label>Biography</label>
+        <!--<md-icon md-svg-src="app/images/communication/svg/production/ic_comment_24px.svg" class="name"></md-icon>-->
+        <textarea ng-model="user.biography" name="biography" columns="1" md-maxlength="150" rows="5"></textarea>
+<!--        <div class="hint" ng-show="showHints">Your personal details?</div>-->
+      </md-input-container>
+    </div>

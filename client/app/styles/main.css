@@ -58,9 +58,6 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
-.redbcg {
-  background-color: #00b3ee;
-}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -83,3 +80,48 @@ body {
     border-bottom: 0;
   }
 }
+/* GENERAL STYLES */
+.pad-bottom {
+  padding-bottom: 40px;
+}
+
+/* PIE CHART STYLES */
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* SHOUL BE EQUAL - Like 200px */
+  height: 200px; /* SHOUL BE EQUAL - Like 200px */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.percent {
+  display: inline-block;
+  line-height: 200px; /* SHOUL BE EQUAL - Like 200px */
+  z-index: 2;
+  font-size: 2em;
+}
+
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: 1em;
+}
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px; }
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+
+v

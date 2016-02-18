@@ -1,0 +1,62 @@
+<div class="container" layout="column">
+    <div layout="row" align="center">
+        <div layout="row" flex>
+            <figure data-ng-repeat="it in ul.users">
+              <img ng-src="{{it.img}}" class="avatar" alt="{{it.firstName}}" ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }" class="md-raised">
+              <figcaption  class="text-primary"> {{it.firstName}}</figcaption>
+            </figure>
+        </div>
+        <figure>
+          <img ng-src="app/images/team/svg/person-add-512px.svg" class="avatar" data-ng-click="showTabDialog($event)"  class="md-raised">
+          <figcaption  class="text-primary">ADD USER</figcaption>
+        </figure>
+    </div>
+
+    <div flex layout="row" tabIndex="-1" role="main" class="md-whiteframe-z2 voffset5"  md-theme="docs-light">        
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2"  md-component-id="left"  md-is-locked-open="$mdMedia('gt-md')">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h1 class="md-display-4">{{ul.selected.firstName}} {{ul.selected.lastName}}</h1>
+                </div>
+            </md-toolbar>
+            <md-card>
+                <img ng-src="{{ul.selected.img}}"  class="md-card-image" alt="{{ul.selected.firstName}}" />
+               
+            <md-card>
+                
+        </md-sidenav>
+        
+        <md-content layout="column" flex>
+            <md-toolbar> 
+                 <div class="md-toolbar-tools">
+                 <h1>Portfolio</h1>
+                 <span flex></span>
+                 <md-button class="md-icon-button" aria-label="About" ui-sref=".about">
+                   <md-icon  md-svg-icon="app/images/action/svg/production/ic_perm_identity_48px.svg" style="color: greenyellow;"></md-icon>
+                 </md-button>
+                 <md-button ui-sref=".education" class="md-icon-button" aria-label="Education" >
+                   <md-icon  md-svg-icon="app/images/social/svg/production/ic_school_48px.svg"style="color: greenyellow;"></md-icon>
+                 </md-button>
+                 <md-button ui-sref=".skills" class="md-icon-button" aria-label="Skills">
+                   <md-icon  md-svg-icon="app/images/content/svg/production/ic_filter_list_48px.svg"  style="color: greenyellow;"></md-icon>
+                 </md-button>
+                 <md-button ui-sref=".contact" class="md-icon-button" aria-label="Contact">
+                   <md-icon  md-svg-icon="app/images/communication/svg/production/ic_contact_mail_24px.svg" data-ng-click="show('contact')" style="color: greenyellow;"></md-icon>
+                 </md-button>
+                 <md-button class="md-icon-button md-warn" aria-label="Delete user"  data-ng-click="deleteUser(ul.selected)">
+                   <md-icon  md-svg-icon="app/images/action/svg/production/ic_delete_24px.svg"></md-icon>
+                 </md-button>
+                 <md-button class="md-icon-button" aria-label="About" ui-sref=".login">
+                   <md-icon  md-svg-icon="app/images/action/svg/production/ic_perm_identity_48px.svg" style="color: greenyellow;"></md-icon>
+                 </md-button>
+                 </div>
+            </md-toolbar>
+           
+            <div flex class="md-inline-form" ng-include="'app/views/team/userForm.html'"   data-ng-show="adduser"></div>
+            
+            <!-- User info tabs-->
+            <div ui-view flex data-ng-show="!adduser"></div>
+
+        </md-content>
+    </div>
+</div>

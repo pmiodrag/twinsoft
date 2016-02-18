@@ -1,0 +1,32 @@
+<md-card flex layout="row">
+  <md-button class="md-icon-button md-primary" aria-label="Education">
+    <md-icon  md-svg-icon="app/images/social/svg/production/ic_school_48px.svg"></md-icon>
+  </md-button>
+  <md-card-content >
+    <h2 class="md-title">Education</h2>   
+  </md-card-content>
+</md-card>
+<md-content flex layout-padding layout="row" data-ng-show="!adduser">
+    <md-list>
+      <md-list-item class="md-1-line">
+        <p class="md-list-item-text">
+          {{ul.selected.education}}
+        </p>
+      </md-list-item>
+    </md-list>
+</md-content>
+  <div layout-gt-sm="row" flex  data-ng-show="adduser">
+      <md-input-container class="md-block" flex>
+        <label>Education</label>
+        <textarea ng-model="user.education" name="education" columns="1" md-maxlength="150" rows="5"></textarea>
+<!--        <div class="hint" ng-show="showHints">Your education details?</div>-->
+      </md-input-container>
+    </div>
+<!-- <div layout-gt-sm="row"  data-ng-show="adduser">
+      <md-input-container class="md-block" flex>
+        <label>Biography</label>
+        <md-icon md-svg-src="app/images/communication/svg/production/ic_comment_24px.svg" class="name"></md-icon>
+        <textarea ng-model="user.biography" name="biography" columns="1" md-maxlength="150" rows="5"></textarea>
+        <div class="hint" ng-show="showHints">Your personal details?</div>
+      </md-input-container>
+    </div>-->

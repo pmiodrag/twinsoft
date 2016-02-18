@@ -1,0 +1,27 @@
+<md-card flex layout="row">
+    <md-button class="md-icon-button md-primary" aria-label="Skills">
+        <md-icon md-svg-icon="app/images/content/svg/production/ic_filter_list_48px.svg"></md-icon>
+    </md-button>
+    <md-card-content>
+        <h2 class="md-title">Skills</h2>        
+    </md-card-content>   
+</md-card>
+<md-content data-ng-show="!adduser">
+    <div layout>
+        <div flex="40" layout layout-align="center center">
+            <span class="md-body-1 md-primary">JavaScript</span>
+        </div>
+        <md-slider flex ng-model="80" min="1" max="100" class="md-primary">
+        </md-slider>
+    </div>
+</md-content>
+<div layout="row" flex data-ng-show="adduser">
+    <md-chips  class="md-primary"
+               ng-model="tags"
+               readonly="false"
+               placeholder="Enter a tag"
+               delete-button-label="Remove Tag"
+               delete-hint="Press delete to remove tag"
+        secondary-placeholder="+Tag">                   
+    </md-chips>
+</div>

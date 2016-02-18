@@ -1,16 +1,209 @@
 <!-- Page Content -->
-<div class="container" data-ng-controller="TeamController">
-<!-- Team Members Row -->
-<div class="row voffset4">
-  <div class="col-lg-12">
-    <h2 class="page-header">Twinsoft team</h2>
+<div class="container-fluid"  ng-cloak md-theme="docs-light">
+  <div layout="row" layout-sm="column" align="center">
+    <div flex ng-repeat="it in ul.users">
+      <figure>
+        <img ng-src="{{it.img}}" class="user-avatar" alt="{{it.name}}" >
+        <figcaption>aa{{it.name}}</figcaption>
+      </figure>
+    </div>
+
   </div>
-  <div class="col-xs-3 text-center" data-ng-repeat="item in team">
-    <img class="img-circle img-responsive img-center" data-ng-src="{{item.img}}" alt="">
-    <h3>{{item.name}}
-      <small>{{item.title}}</small>
-    </h3>
-    <p>{{item.description}}</p>
+  <div flex layout="row" class="voffset2">
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-sm')">
+
+      <md-toolbar class="md-whiteframe-z1">
+        <h1>Twinsoft Team</h1>
+      </md-toolbar>
+
+      <md-list>
+        <md-list-item ng-repeat="it in ul.users">
+          <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }" class="md-raised">
+
+            <!--<md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>-->
+            <img ng-src="{{it.img}}" class="user-avatar" alt="{{it.name}}" />
+            <span class="text-primary"> {{it.firstName}} </span>
+
+          </md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button data-ng-click="showTabDialog($event)" class="md-raised">
+            <md-icon md-svg-icon="app/images/team/svg/person-add-512px.svg" class="avatar"></md-icon>
+              ADD USER
+          </md-button>
+        </md-list-item>
+      </md-list>
+
+    </md-sidenav>
+
+    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2"  md-theme="docs-light">
+
+      <md-toolbar layout="row" class="md-whiteframe-z1" data-ng-show="adduser">
+        <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+          <md-icon md-svg-icon="menu" ></md-icon>
+        </md-button>
+        <h1>Portfolio</h1>
+      </md-toolbar>
+      <md-toolbar md-scroll-shrink ng-if="true" class="md-warn" data-ng-show="!adduser">
+        <div class="md-toolbar-tools">
+          <h3>
+            <span>{{ul.selected.firstName}} {{ul.selected.lastName}}</span>
+          </h3>
+        </div>
+      </md-toolbar>
+      <md-content flex id="content" data-ng-show="!adduser">
+
+
+        <!--<md-sidenav class="md-sidenav-left md-whiteframe-z3"  md-component-id="left"  md-is-locked-open="$mdMedia('gt-md')">-->
+            <!--<md-card>-->
+                <!--<img ng-src="{{ul.selected.img}}"  class="md-card-image" alt="{{ul.selected.firstName}}" />-->
+                <!--<md-card-content>-->
+                  <!--<h2 class="md-title">About Me</h2>-->
+                  <!--<p>-->
+                    <!--A passionate Blogger and Developer.-->
+                    <!--He has more then 5 years of experience on web application development.-->
+                    <!--He loves to work in javascript programming language.At present he is-->
+                    <!--exploring W3C Web Component specification.-->
+                  <!--</p>-->
+                <!--</md-card-content>-->
+            <!--</md-card>-->
+        <!--</md-sidenav>-->
+
+        <md-content layout="row">
+          <md-card>
+            <img ng-src="{{ul.selected.img}}"  class="md-card-image thumb" alt="{{ul.selected.firstName}}" />
+            <md-card-content>
+              <h2 class="md-title">About Me</h2>
+              <p>
+                A passionate Blogger and Developer.
+                He has more then 5 years of experience on web application development.
+                He loves to work in javascript programming language.At present he is
+                exploring W3C Web Component specification.
+              </p>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <img alt="Education"
+                 src="image/table-chair.jpg">
+            <md-card-content>
+              <h2 class="md-title">Education</h2>
+              <md-list>
+                <md-list-item class="md-1-line">
+                  <p class="md-list-item-text">
+                    He has done M.Tech in Computer Science subject from VIT University Vellore.
+                    He has done B.Tech in Information Technology subject from BPUT University.
+                  </p>
+                </md-list-item>
+              </md-list>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <img alt="Contact Me"
+                 src="image/contact-me.jpg">
+            <md-card-content>
+              <h2 class="md-title">Contact Me</h2>
+              <div layout>
+                <div flex="20" layout layout-align="left center">
+                  <span class="md-body-1 md-primary">Email</span>
+                </div>
+                        <span flex class="md-primary" layout-align="left center">
+                            sandeeppateltech@gmail.com
+                        </span>
+              </div>
+              <div layout>
+                <div flex="20" layout layout-align="left center">
+                  <span class="md-body-1 md-primary">Blog</span>
+                </div>
+                        <span flex class="md-primary" layout-align="left center">
+                            www.tutorialsavvy.com
+                        </span>
+              </div>
+            </md-card-content>
+          </md-card>
+            <!--<md-card flex>-->
+              <!--<md-card-header>-->
+                <!--<md-card-avatar>-->
+                  <!--<md-icon class="fa" md-svg-src="app/images/social/svg/production/ic_person_24px.svg"></md-icon>-->
+                <!--</md-card-avatar>-->
+                <!--<md-card-header-text>-->
+                  <!--<span class="md-title">{{ul.selected.title}}</span>-->
+                <!--</md-card-header-text>-->
+              <!--</md-card-header>-->
+              <!--<img ng-src="{{ul.selected.img}}"  class="thumb" alt="{{ul.selected.firstName}}" data-ng-show="myFile=='defaultImageUrl'" />-->
+              <!--<img ngf-thumbnail="myFile" class="thumb" alt="image caption" data-ng-show="myFile!='defaultImageUrl'" >-->
+              <!--&lt;!&ndash;<md-card-title>&ndash;&gt;-->
+                <!--&lt;!&ndash;<md-card-title-text>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="md-headline">In-card actions</span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;<span class="md-subhead">Description</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</md-card-title-text>&ndash;&gt;-->
+              <!--&lt;!&ndash;</md-card-title>&ndash;&gt;-->
+
+              <!--<md-card-actions layout="row" layout-align="start center">-->
+                <!--<md-button ng-click="myFile = null"  class="md-button md-raised md-warn" ng-show="myFile"><md-icon class="fa" md-svg-src="app/images/action/svg/production/ic_delete_24px.svg"></md-icon></md-button>-->
+                <!--<md-button type="submit" class="md-button md-primary md-raised md-success" ng-click="uploadPic(myFile)"  ng-show="myFile"><md-icon class="fa" md-svg-src="app/images/action/svg/production/ic_check_circle_24px.svg"></md-icon></md-button>-->
+                <!--<choose-file-button  layout-align="center center">-->
+                  <!--<md-fab-trigger>-->
+                  <!--<md-button aria-label="profile photo" class="md-fab md-primary" >-->
+                  <!--<md-icon class="fa" md-svg-src="app/images/social/svg/production/ic_person_24px.svg"></md-icon>-->
+                  <!--</md-button>-->
+                  <!--</md-fab-trigger>-->
+                  <!--<input type="file" aria-label="Upload a file" file-model="myFile"  ng-model="myFile" name="file">-->
+                  <!--</choose-file-button>-->
+                  <!--</md-card-actions>-->
+              <!--<md-progress-linear md-mode="determinate" value="{{myFile.progress}}"  ng-show="myFile.progress >= 0" ></md-progress-linear>-->
+              <!--<md-card-content>dsfsd-->
+                <!--<p>-->
+                  <!--{{ul.selected.description}}-->
+                <!--</p>-->
+              <!--</md-card-content>-->
+            <!--</md-card>-->
+
+            <!--<md-card flex>-->
+            <!--<md-card-header>-->
+            <!--<md-card-header-text>-->
+            <!--<span class="md-title">Profile photo</span>-->
+            <!--</md-card-header-text>-->
+            <!--</md-card-header>-->
+            <!--<img ngf-thumbnail="myFile" class="thumb" alt="image caption">-->
+            <!--<md-card-actions layout="row" layout-align="start center">-->
+            <!--<md-button ng-click="myFile = null"  class="md-button md-raised md-warn" ng-show="myFile"><md-icon class="fa" md-svg-src="app/images/action/svg/production/ic_delete_24px.svg"></md-icon></md-button>-->
+            <!--<md-button type="submit" class="md-button md-primary md-raised md-success" ng-click="uploadPic(myFile)"  ng-show="myFile"><md-icon class="fa" md-svg-src="app/images/action/svg/production/ic_check_circle_24px.svg"></md-icon></md-button>-->
+            <!--<choose-file-button  layout-align="center center">-->
+            <!--<md-fab-trigger>-->
+            <!--<md-button aria-label="profile photo" class="md-fab md-primary" >-->
+            <!--<md-icon class="fa" md-svg-src="app/images/social/svg/production/ic_person_24px.svg"></md-icon>-->
+            <!--</md-button>-->
+            <!--</md-fab-trigger>-->
+            <!--<input type="file" aria-label="Upload a file" file-model="myFile"  ng-model="myFile" name="file">-->
+            <!--</choose-file-button>-->
+            <!--</md-card-actions>-->
+            <!--<md-card-content>-->
+            <!--<md-progress-linear md-mode="determinate" value="{{myFile.progress}}"  ng-show="myFile.progress >= 0" ></md-progress-linear>-->
+            <!--</md-card-content>-->
+            <!--</md-card>-->
+
+        </md-content>
+        <!--<md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>-->
+        <!--<h2>{{ul.selected.firstName}} {{ul.selected.lastName}}</h2>-->
+        <!--<p>{{ul.selected.description}}</p>-->
+       <!--{{ ul.selected}}-->
+        <button type="submit" ng-click="deleteUser(ul.selected)">Delete</button>
+        <!--<md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">-->
+          <!--<md-tooltip>Contact {{ul.selected.firstName}} {{ul.selected.lastName}}</md-tooltip>-->
+          <!--<md-icon md-svg-icon="share"></md-icon>-->
+        <!--</md-button>-->
+
+      </md-content>
+
+      <!--<div  layout="column" ng-cloak class="md-inline-form" >-->
+        <div data-ng-show="adduser" ng-include="'app/views/team/userForm.html'"></div>
+
+      <!--</div>-->
+
+
+    </div>
   </div>
-</div>
+
 </div>

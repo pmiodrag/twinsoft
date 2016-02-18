@@ -41,11 +41,10 @@ module.exports = function(app) {
    //   port: 35729
    // }));
     app.use(require('connect-livereload')({
-      port: 35728,
-      ignore: ['.js', '.svg']
+      port: 35728
+     // ignore: ['.js', '.svg']
     }));
 
-    console.log('Time 2 : ', Date.now());
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
     app.set('appPath', path.join(config.root, 'client'));

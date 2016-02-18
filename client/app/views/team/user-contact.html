@@ -1,0 +1,20 @@
+
+<md-card flex layout="row" >
+  <md-button class="md-icon-button md-primary" aria-label="Contact">
+     <md-icon md-svg-icon="app/images/communication/svg/production/ic_contact_mail_24px.svg"></md-icon>
+  </md-button>
+  <md-card-content >
+    <h2 class="md-title">Contact</h2>   
+  </md-card-content>
+</md-card>
+
+<md-input-container class="md-block" data-ng-show="adduser">
+    <label>Email</label>
+    <input name="email" ng-model="user.email" type="email"
+           required md-minlength="10"  md-maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+    <div ng-messages="userForm.email.$error" ng-hide="showHints">
+      <div ng-message-exp="['required', 'md-minlength', 'md-maxlength', 'pattern']">
+        Your email must be between 10 and 100 characters long and look like an e-mail address.
+      </div>
+    </div>
+</md-input-container>

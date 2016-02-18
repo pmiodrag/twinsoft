@@ -1,0 +1,785 @@
+<html lang="en"><head><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
+  <meta charset="utf-8">
+  <title>CleanStrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/cleanstrap.css" rel="stylesheet" id="cleanstrapLink">
+  <link href="css/colorbox.css" rel="stylesheet">
+  <link href="css/template.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/refineslide.css" rel="stylesheet">
+  <link href="css/refineslide-theme-dark.css" rel="stylesheet">
+  <script src="js/jquery-1.9.js"></script>
+  <script src="js/jquery-migrate-1.1.js"></script>
+  <script src="js/jquery.refineslide.js"></script>
+  <script src="js/respond.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <!--[if IE 8]>
+  <link href="css/ie8.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/23/1/controls.js"></script></head>
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+<style type="text/css" scoped="">#configure{position:fixed;top:65px;right:-170px;z-index:99999;border-top:4px solid #DDD;border-left:4px solid #DDD;border-bottom:4px solid #DDD;background:#FFF;padding:10px;width:200px;vertical-align:middle;}#configure #sub-configure{display:none;}#configure.open #sub-configure{display:block;text-align:center;padding:10px 0;}.color-choose{width:20px;height:20px;display:inline-block;vertical-align:middle;}a.no-underline{text-decoration:none;}#configure.open{right:0;}</style>
+<script>
+  $(function(){
+    if($(window).width() > 400) {
+      $('#con-des').hide();
+    } else {
+      $('#sub-configure').hide();
+    }
+  });
+</script>
+<div id="configure">
+  <a href="javascript:;" onclick="$('#configure').toggleClass('open')" class="no-underline"><i class="icon-cog" style="font-size:30px; vertical-align: middle"></i></a>
+  &nbsp; &nbsp; &nbsp; Colors &nbsp;
+  <a href="javascript:;" onclick="$('#cleanstrapLink').attr('href','css/cleanstrap.css')"><div class="color-choose" style="background-color: #3498db"></div></a>
+  <a href="javascript:;" onclick="$('#cleanstrapLink').attr('href','css/cleanstrap-green.css')"><div class="color-choose" style="background-color: #1abc9c"></div></a>
+  <a href="javascript:;" onclick="$('#cleanstrapLink').attr('href','css/cleanstrap-red.css')"><div class="color-choose" style="background-color: #e74c3c"></div></a>
+  <div id="sub-configure">
+    <a id="con-mob" href="mobile.php" class="btn btn-primary input-block-level">Mobile view</a>
+    <a id="con-des" href="/" target="_blank" class="btn btn-primary input-block-level" style="display: none;">Desktop view</a>
+  </div>
+</div>
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner bg">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand">
+        <i class="icon-cloud" style="font-size:36px; position: absolute; margin-top:-8px"></i>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CleanStrap </a>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class=""><a href="#about">Company</a>
+              </li><li class=""><a href="#team">Team</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="#projects">Projects</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page">
+
+  <div class="bg bg-peter-river inverse" id="home">
+    <div class="container">
+      <div class="section-silder group">
+        <div class="rs-wrap" style="width: 1100px;"><div class="rs-slide-bg"><ul id="images" class="rs-slider no-margin">
+          <li class="group active bg-peter-river rs-slide-0" style="opacity: 1; z-index: 2;">
+            <div class="row-fluid slider-inner">
+              <div class="span4 slider-list">
+                <ul class="icons-ul" id="top-ul">
+                  <li><i class="icon-li icon-heart"></i>Flat design</li>
+                  <li><i class="icon-li icon-cloud-download"></i>Responsive</li>
+                  <li><i class="icon-li icon-google-plus-sign"></i>Google web fonts</li>
+                  <li><i class="icon-li icon-twitter-sign"></i>Twitter Bootstrap</li>
+                  <li><i class="icon-li icon-ok"></i>Font Awesome Icons</li>
+                </ul>
+              </div>
+              <div class="span8">
+                <div class="tp">
+                  <a href="#video-wrap" class="player"><img src="images/video-img.jpg" class="video-player border-belize-hole rs-slide-image" alt="Image"></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="group bg-peter-river rs-slide-1">
+            <div class="row-fluid slider-inner">
+              <div class="responsive-text">
+                <h2>Works well on all Platforms!</h2>
+                <div class="responsive-small-text">
+                  <h3>Its easy on eyes and responsive!</h3>
+                </div>
+              </div>
+              <div class="responsive-img">
+                <a href="mobile.php"><img src="img/platform-slider.png" style="vertical-align: bottom;" width="600" alt="Image" class="rs-slide-image"></a>
+              </div>
+            </div>
+          </li>
+        </ul></div><div class="rs-arrows"><a href="#" class="rs-prev">‹</a><a href="#" class="rs-next">›</a></div></div>
+        <ul class="nav nav-pills pull-right transition-option transition-btn-wrap">
+          <li class="dropdown active">
+            <a class="dropdown-toggle transition-btn" data-toggle="dropdown" href="#">Transition <b class="caret white"></b></a>
+            <ul class="translist group dropdown-menu pull-right">
+              <li><a href="#_cubeH" class="bobble-css">Cube horizontal</a></li>
+              <li><a href="#_cubeV" class="bobble-css active">Cube vertical</a></li>
+              <li><a href="#_fade" class="bobble-css">Fade</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid" style="background:#000;" id="video-wrap">
+    <div class="container">
+      <div class="center-align">
+        <a href="javascript:void(0)" class="close"><i class="icon-remove"></i></a>
+        <iframe class="" src="blank.html" id="iframe-vimeo"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function() {
+
+      var vimeoUrl = 'http://player.vimeo.com/video/27299211?autoplay=1';
+
+      $('.player').click(function(){
+
+        $('#video-wrap').slideDown();
+        if($(this).attr('href').substr(0,1) == '#' && $($(this).attr('href')).length) {
+          var offset = 64;
+          $('#iframe-vimeo').attr('src',vimeoUrl);
+          $('body,html').animate({'scrollTop':$($(this).attr('href')).position().top - offset},800);
+          return false;
+
+        }
+      });
+
+      $('#video-wrap .close').click(function(){
+        $('#video-wrap').slideUp();
+        $('#iframe-vimeo').attr('src','');
+      });
+
+
+      var $upper = $('#upper');
+
+      $('#images').refineSlide({
+        transition : 'cubeV',
+        onInit : function () {
+          var slider = this.slider,
+            $triggers = $('.translist').find('> li > a');
+
+          $triggers.parent().find('a[href="#_'+ this.slider.settings['transition'] +'"]').addClass('active');
+
+          $triggers.on('click', function (e) {
+            e.preventDefault();
+
+            if (!$(this).find('.unsupported').length) {
+              $triggers.removeClass('active');
+              $(this).addClass('active');
+              slider.settings['transition'] = $(this).attr('href').replace('#_', '');
+            }
+          });
+
+          function support(result, bobble) {
+            var phrase = '';
+
+            if (!result) {
+              phrase = ' not';
+              $upper.find('div.bobble-'+ bobble).addClass('unsupported');
+              $upper.find('div.bobble-js.bobble-css.unsupported').removeClass('bobble-css unsupported').text('JS');
+            }
+          }
+
+          support(this.slider.cssTransforms3d, '3d');
+          support(this.slider.cssTransitions, 'css');
+        }
+      });
+    });
+
+  </script>
+  <div class="bg bg-clouds" id="about">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="bg card bg-concrete double-gap-bottom inverse">
+            <i class="icon-asterisk icon-pop-out-div"></i>
+            <div class="row-fluid">
+              <div class="pull-left aboutus-text"><h2>About us</h2></div>
+              <img src="img/sahusoft-icon.jpg" class="img-circle pull-right" alt="Profile Image" width="170"></div>
+            <div class="about-gap" style="margin-top:-40px;">
+              <div class="about-top-text"><h3>Sahusoft</h3> </div>
+              <p>Sahusoft is a creative technological company. We love to create things. We believe that technology doesn’t stand alone but using it at the right place with a social and artistic approach can fill the gaps. </p>
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="row-fluid">
+            <div class="span11 offset1 about-text">
+              Lorem ipsum dolor sit amet &nbsp;&nbsp;
+              <div class="onoffswitch tick">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch-tick" checked="">
+                <label class="onoffswitch-label" for="myonoffswitch-tick">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch tickswitch-switch"></span>
+                </label>
+              </div>
+              <br><br><br>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin.
+              </p>
+              <br>
+              <a href="#team" class="btn btn-primary more">&nbsp; &nbsp; More stuff <i class="icon-chevron-down"></i>&nbsp; &nbsp; </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid double-gap-bottom" id="team">
+    <div class="container">
+      <h2>Our Team</h2>
+      <hr>
+      <div class="row-fluid center-align">
+        <div class="span3 double-gap-bottom">
+          <a href="/about-single.php"><img class="img-circle profile-img" src="img/profile-pic.jpg" alt=""></a>
+          <h3>Kumar Sanket <span class="small">Director</span></h3>
+          <hr class="small-hr">
+          <p>Prisus lectus rhoncus mi, sit amet tristique lectus</p>
+          <div class="user-social-link tp">
+            <a href="https://plus.google.com" target="_blank"><i class="icon-google-plus-sign"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-sign"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="icon-twitter-sign"></i></a>
+          </div>
+        </div>
+        <div class="span3 double-gap-bottom">
+          <a href="/about-single.php"><img class="img-circle profile-img" src="img/profile-7.jpg" alt=""></a>
+          <h3>Kumar Pratik<span class="small">Director</span></h3>
+          <hr class="small-hr">
+          <p>Prisus lectus rhoncus mi, sit amet tristique lectus</p>
+          <div class="user-social-link tp">
+            <a href="https://plus.google.com" target="_blank"><i class="icon-google-plus-sign"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-sign"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="icon-twitter-sign"></i></a>
+          </div>
+        </div>
+        <div class="span3 double-gap-bottom">
+          <a href="#"><img class="img-circle profile-img" src="img/profile-2.jpg" alt=""></a>
+          <h3>Saurabh Sahu <span class="small">Director</span></h3>
+          <hr class="small-hr">
+          <p>Prisus lectus rhoncus mi, sit amet tristique lectus</p>
+          <div class="user-social-link tp">
+            <a href="https://plus.google.com" target="_blank"><i class="icon-google-plus-sign"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-sign"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="icon-twitter-sign"></i></a>
+          </div>
+        </div>
+        <div class="span3 double-gap-bottom">
+          <a href="#"><img class="img-circle profile-img" src="img/profile-4.jpg" alt=""></a>
+          <h3>Varun Sahu <span class="small">Director</span></h3>
+          <hr class="small-hr">
+          <p>Prisus lectus rhoncus mi, sit amet tristique lectus</p>
+          <div class="user-social-link tp">
+            <a href="https://plus.google.com" target="_blank"><i class="icon-google-plus-sign"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-sign"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="icon-twitter-sign"></i></a>
+          </div>
+        </div>
+      </div> </div>
+  </div>
+  <div class="bg-clouds row-fluid">
+    <div class="container" id="projects">
+      <h2 class="dark">Projects</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin.
+      </p>
+      <div class="row-fluid tiles">
+        <div class="span4 bg-turquoise">
+          <a href="#meowfoto" data-toggle="modal">
+            <div class="tile">
+              <i class="icon-filter tile-icon"></i>
+              <h2>Meowfoto</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+        <div class="span4 bg-emerland">
+          <a href="#meowsome" data-toggle="modal">
+            <div class="tile">
+              <i class="icon-asterisk tile-icon"></i>
+              <h2>Meowsome</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+        <div class="span4 bg-peter-river">
+          <a href="#sahusoft" data-toggle="modal">
+            <div class="tile">
+              <i class=" icon-lightbulb tile-icon"></i>
+              <h2>Sahusoft</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+        <div class="span4 bg-sun-flower no-left-margin">
+          <a href="#mlo" data-toggle="modal">
+            <div class="tile">
+              <i class="icon-sitemap tile-icon"></i>
+              <h2>MylifeIsOnline</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+        <div class="span4 bg-orange">
+          <a href="#taskize" data-toggle="modal">
+            <div class="tile">
+              <i class="icon-tasks tile-icon"></i>
+              <h2>Taskize</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+        <div class="span4 bg-alizarin">
+          <a href="#meowapps" data-toggle="modal">
+            <div class="tile">
+              <i class="icon-group tile-icon"></i>
+              <h2>Meowapps</h2>
+              <p>The coolest filters on the web are here and you’re</p>
+            </div>
+            <div class="details"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi.</p></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid" id="pricing">
+    <div class="container">
+      <div class="row-fluid bp">
+        <div class="clearfix pricing">
+          <h2>Pricing Tables</h2>
+          <div class="row-fluid double-gap-top">
+            <div class="span3">
+              <h4>Package Name</h4>
+              <ul class="no-list-style no-margin striped-ul">
+                <li>Disk Space </li>
+                <li>Bandwidth </li>
+                <li>Email Accounts </li>
+                <li>MySQL Databases </li>
+                <li>Ad Credit </li>
+                <li>Free Domain </li>
+              </ul>
+            </div>
+            <div class="span2">
+              <div class="heading inverse bg-alizarin"><h4>Basic</h4></div>
+              <div class="price-box clearfix">
+                <ul class="no-list-style no-margin striped-ul">
+                  <li> 10 GB </li>
+                  <li> 200 GB </li>
+                  <li> 100 </li>
+                  <li> 10 </li>
+                  <li> $10 </li>
+                  <li><span class="label label-inverse">$5<small>/month</small></span></li>
+                </ul>
+              </div>
+              <div><a href="#" class="btn btn-block btn-danger btn-flat"><span>Buy</span></a></div>
+            </div>
+            <div class="span2">
+              <div class="heading inverse bg-orange"><h4>Pro</h4></div>
+              <div class="price-box clearfix">
+                <ul class="no-list-style no-margin striped-ul">
+                  <li> 10 GB </li>
+                  <li> 200 GB </li>
+                  <li> 100 </li>
+                  <li> 10 </li>
+                  <li> $10 </li>
+                  <li><span class="label label-inverse">$10<small>/month</small></span></li>
+                </ul>
+              </div>
+              <div><a href="#" class="btn btn-block btn-warning btn-flat"><span>Buy</span></a></div>
+            </div>
+            <div class="span2">
+              <div class="heading inverse bg-peter-river"><h4>Silver</h4></div>
+              <div class="price-box clearfix">
+                <ul class="no-list-style no-margin striped-ul">
+                  <li> 10 GB </li>
+                  <li> 200 GB </li>
+                  <li> 100 </li>
+                  <li> 10 </li>
+                  <li> $10 </li>
+                  <li><span class="label label-inverse">$15<small>/month</small></span></li>
+                </ul>
+              </div>
+              <div><a href="#" class="btn btn-block btn-primary btn-flat"><span>Buy</span></a></div>
+            </div>
+            <div class="span2">
+              <div class="heading inverse bg-emerland"><h4>Gold</h4></div>
+              <div class="price-box clearfix">
+                <ul class="no-list-style no-margin striped-ul">
+                  <li> 10 GB </li>
+                  <li> 200 GB </li>
+                  <li> 100 </li>
+                  <li> 10 </li>
+                  <li> $10 </li>
+                  <li><span class="label label-inverse">$20<small>/month</small></span></li>
+                </ul>
+              </div>
+              <div><a href="#" class="btn btn-block btn-success btn-flat"><span>Buy</span></a></div>
+            </div>
+            <div class="span2">
+              <div class="heading inverse bg-midnight-blue"><h4>Diamond</h4></div>
+              <div class="price-box clearfix">
+                <ul class="no-list-style no-margin striped-ul">
+                  <li> 10 GB </li>
+                  <li> 200 GB </li>
+                  <li> 100 </li>
+                  <li> 10 </li>
+                  <li> $10 </li>
+                  <li><span class="label label-inverse">$25<small>/month</small></span></li>
+                </ul>
+              </div>
+              <div><a href="#" class="btn btn-block btn-inverse btn-flat"><span>Buy</span></a></div>
+            </div>
+          </div>
+        </div> </div>
+    </div>
+  </div>
+  <div class="row-fluid bg-clouds" id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div id="myCarousel" class="carousel slide default-carousel full-width-carousel">
+        <hr>
+
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="icon-angle-left dark"></i></a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-angle-right dark"></i></a>
+
+        <div class="carousel-inner">
+          <div class="active item">
+            <ul class="gallery no-list-style row-fluid no-margin thumbnails double-gap-top">
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-1.jpg" title="Photo Title" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-1.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-2.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-2.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-3.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-3.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-4.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-4.jpg">
+                </a>
+              </li>
+              <li class="span3 no-left-margin">
+                <a class="thumbnail cboxElement" href="img/gallery/image-7.jpg" title="Photo Title" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-7.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-8.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-8.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-9.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-9.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-6.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-6.jpg">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <ul class="gallery no-list-style row-fluid no-margin thumbnails double-gap-top">
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-1.jpg" title="Photo Title" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-1.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-2.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-2.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-3.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-3.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-4.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-4.jpg">
+                </a>
+              </li>
+              <li class="span3 no-left-margin">
+                <a class="thumbnail cboxElement" href="img/gallery/image-7.jpg" title="Photo Title" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-7.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-8.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-8.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-9.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-9.jpg">
+                </a>
+              </li>
+              <li class="span3">
+                <a class="thumbnail cboxElement" href="img/gallery/image-6.jpg" data-rel="colorbox">
+                  <img alt="150x150" src="img/gallery/thumb-6.jpg">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(function() {
+          var colorbox_params = {
+            reposition:true,
+            scalePhotos:true,
+            scrolling:false,
+            previous:'<i class="icon-angle-left"></i>',
+            next:'<i class="icon-angle-right"></i>',
+            close:'&times;',
+            current:'{current} of {total}',
+            maxWidth:'100%',
+            maxHeight:'100%',
+            onOpen:function(){
+              document.body.style.overflow = 'hidden';
+            },
+            onClosed:function(){
+              document.body.style.overflow = 'auto';
+            },
+            onComplete:function(){
+              $.colorbox.resize();
+            }
+          };
+
+          $('.gallery [data-rel="colorbox"]').colorbox(colorbox_params);
+          $("#cboxLoadingGraphic").append("<i class='icon-spinner'></i>");
+          //let's add a custom loading icon
+        });
+
+      </script> </div>
+  </div>
+  <div class="bg bg-turquoise inverse" id="features">
+    <div class="container">
+      <div class="tp bp"><h2>CleanStrap works well with Mobile, Tablets &amp; Desktops</h2></div>
+      <div class="row-fluid">
+        <div class="span7">
+          <a href="mobile.php"><img src="img/platform-slider.png" alt="Image" width="540" style="position:relative; bottom:-12px;"></a>
+        </div>
+        <div class="span5">
+          <h3>Its easy on eyes and responsive!</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="map" id="contact">
+      <div id="map-canvas" style="height: 600px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 766px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1022px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1022px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 766px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 766px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1022px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 510px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1278px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 510px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1278px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1278px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 510px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1534px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 254px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 254px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1534px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1534px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 254px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1790px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -2px; top: 152px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -2px; top: 408px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1790px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -2px; top: -104px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 1790px; top: 408px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 766px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1022px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1022px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 766px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 766px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1022px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 510px; top: 152px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1278px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 510px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1278px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1278px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 510px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1534px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 254px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 254px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1534px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1534px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 254px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1790px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -2px; top: 152px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -2px; top: 408px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1790px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -2px; top: -104px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 1790px; top: 408px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: 766px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4823!3i6159!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1022px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4824!3i6159!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1022px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4824!3i6158!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 766px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4823!3i6158!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 766px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4823!3i6160!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1022px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4824!3i6160!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 510px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4822!3i6159!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1278px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4825!3i6159!4i256!2m3!1e0!2sm!3i330305094!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 510px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4822!3i6160!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1278px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4825!3i6158!4i256!2m3!1e0!2sm!3i330305094!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1278px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4825!3i6160!4i256!2m3!1e0!2sm!3i330310134!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 510px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4822!3i6158!4i256!2m3!1e0!2sm!3i330313014!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1534px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6159!4i256!2m3!1e0!2sm!3i330295737!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 254px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4821!3i6159!4i256!2m3!1e0!2sm!3i330306534!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 254px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4821!3i6160!4i256!2m3!1e0!2sm!3i330287819!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1534px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6158!4i256!2m3!1e0!2sm!3i330295737!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1534px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4826!3i6160!4i256!2m3!1e0!2sm!3i330287819!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 254px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4821!3i6158!4i256!2m3!1e0!2sm!3i330306534!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1790px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6159!4i256!2m3!1e0!2sm!3i330295737!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -2px; top: 152px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4820!3i6159!4i256!2m3!1e0!2sm!3i330306534!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -2px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4820!3i6160!4i256!2m3!1e0!2sm!3i330287819!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1790px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6158!4i256!2m3!1e0!2sm!3i330295737!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -2px; top: -104px; transition: opacity 200ms ease-out;"><img src="https://mts0.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4820!3i6158!4i256!2m3!1e0!2sm!3i330306534!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 1790px; top: 408px; transition: opacity 200ms ease-out;"><img src="https://mts1.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4827!3i6160!4i256!2m3!1e0!2sm!3i330295737!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 802px; top: 210px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2015 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 167px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span style="">Map data ©2015 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2015 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@40.720982,-74.00999,14z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=40.720982,-74.00999&amp;z=14&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div></div></div>
+      <div class="span6 contact-form">
+        <div class="pad">
+          <div class="row-fluid">
+            <div class="pull-right">
+              <div class="pull-right social-icon">
+                <a href="https://plus.google.com" target="_blank"><i class="icon-google-plus-sign"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-sign"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="icon-twitter-sign"></i></a>
+                <a href="http://pinterest.com/" target="_blank"><i class="icon-pinterest-sign"></i></a>
+              </div>
+            </div>
+            <div class="pull-left"><h2>Contact us</h2></div>
+          </div>
+          <div class="row-fluid">
+            <address>
+              <span class="big">CleanStrap</span><br>
+              1600 Amphitheatre Parkway<br>
+              Mountain View, CA 94043<br>
+              Phone: +1 650-253-0000<br>
+              Fax: +1 650-253-0001<br>
+            </address>
+          </div>
+          <h2>Say hello <i class="icon-envelope-alt orange"></i></h2>
+          <form class="form-horizontal form-flat pad">
+            <div class="control-group">
+              <div class="control">
+                <input type="text" placeholder="Name" class="input-block-level">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="control">
+                <input type="email" placeholder="Email" class="input-block-level">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="control">
+                <textarea placeholder="Message" class="input-block-level"></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="control">
+                <input type="submit" value="Send" class="btn btn-primary btn-large pull-right">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script>
+      var map;
+      function initialize() {
+        var mapOptions = {
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          draggable: false,
+          zoom: 14,
+          center: new google.maps.LatLng(40.720982, -74.009990),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          disableDefaultUI: true
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
+        var myLatlng = new google.maps.LatLng(40.721682, -74.039990);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Hello World!'
+        });
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script> </div>
+  <div class="bg bg-midnight-blue inverse tp">
+    <div class="center-align">
+      <form class="no-margin" action="#" method="post">Subscribe &nbsp;
+        <input type="email" class="large-square-input" placeholder="Email" required="">
+        <input type="submit" name="submit" value="Subscribe" class="btn btn-warning btn-flat btn-xlarge">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="meowfoto" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-turquoise">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-filter tile-icon"></i> MeowFoto</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn pull-right btn-success">Read More</a>
+  </div>
+</div>
+
+
+<div id="meowsome" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-emerland">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-asterisk tile-icon"></i> Meowsome</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn pull-right btn-success">Read More</a>
+  </div>
+</div>
+
+
+<div id="sahusoft" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-peter-river">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-lightbulb tile-icon"></i> Sahusoft</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn btn-primary pull-right">Read More</a>
+  </div>
+</div>
+
+
+<div id="mlo" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-sun-flower">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-sitemap tile-icon"></i> MyLifeIsOnline</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn pull-right btn-warning">Read More</a>
+  </div>
+</div>
+
+
+<div id="taskize" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-orange">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-tasks tile-icon"></i> Taskize</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn pull-right btn-warning">Read More</a>
+  </div>
+</div>
+
+
+<div id="meowapps" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header bg-alizarin">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><i class="icon-group tile-icon"></i> Meowapps</h3>
+  </div>
+  <div class="modal-body">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur, purus eu faucibus bibendum, risus lectus rhoncus mi, sit amet tristique lectus nisi nec lectus. Cras vel libero justo. In eget quam sed dui ornare posuere. Ut et interdum dui. Morbi congue leo vel ante facilisis id blandit odio tempus. Integer eleifend eleifend sollicitudin. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tortor ut enim aliquam accumsan vitae ut dui. Sed et massa ipsum. Maecenas consectetur. </p>
+    <a class="btn btn pull-right btn-danger">Read More</a>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var offset = 64;
+    var windowWidth = 0;
+
+    $(window).resize(function(){
+      windowWidth = $(window).width();
+      if(windowWidth < 979 ){
+        offset = 0;
+      }
+    });
+
+    $('.nav li a, .more').click(function(event) {
+      if($(this).attr('href').substr(0,1) == '#' && $($(this).attr('href')).length) {
+        event.preventDefault();
+        $('body,html').animate({'scrollTop':$($(this).attr('href')).position().top - offset},600);
+      }
+    });
+
+
+    $(window).trigger('resize');
+
+  });
+</script>
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"><i class="icon-spinner"></i></div><button type="button" id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>
